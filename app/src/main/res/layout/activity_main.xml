@@ -1,75 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_centerInParent="true"
-    android:background="@drawable/backgroundimg"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".ui_activities.MainActivity">
 
-    <LinearLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="30dp"
-        android:background="#4F555555"
-        android:orientation="horizontal">
+        android:fitsSystemWindows="true"
+        tools:openDrawer="start">
 
-        <LinearLayout
+        <include
+            layout="@layout/app_bar_main"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:orientation="vertical"
-            >
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:id="@+id/imageView"
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:fitsSystemWindows="true"
+            app:headerLayout="@layout/nav_header_main"
+            app:menu="@menu/activity_main_drawer" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8">
+
+            <FrameLayout
+                android:id="@+id/container_body"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                app:srcCompat="@drawable/logo" />
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:text="BindTech"
-                android:textSize="60sp"
-                android:textStyle="bold"
-                app:fontFamily="cursive" />
+            </FrameLayout>
 
-            <Button
-                android:id="@+id/login_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_style"
-                android:layout_marginTop="30dp"
-                android:text="Login" />
 
-            <Button
-                android:id="@+id/register_id"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/button_style"
-                android:layout_marginTop="20dp"
-                android:text="Register" />
+        </RelativeLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="Skip"
-                android:layout_marginTop="30dp"
-                android:textColor="#ffffff"
-                android:textSize="30sp"
-                android:textStyle="bold" />
 
-        </LinearLayout>
     </LinearLayout>
+</RelativeLayout>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>

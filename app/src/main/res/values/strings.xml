@@ -1,3 +1,45 @@
 <resources>
-    <string name="app_name">BindTech</string>
+    <string name="app_name">E-Learning</string>
+    <string name="head1">Screen1</string>
+    <string name="head2">Screen2</string>
+    <string name="head3">Screen3</string>
+    <string name="head4">Screen4</string>
+    <string name="desc1">This is first Screen</string>
+    <string name="desc2">This is Second Screen</string>
+    <string name="desc3">This is Third Screen</string>
+    <string name="desc4">This is Fourth Screen</string>
+    <string name="privacy_statement">By using this App, you agree to the terms and conditions of E-Learning Privacy Statement. For Privacy details, visit\n <u>https://www.google.com</u></string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">About Android</string>
+    <string name="slide_1_desc">Android is a mobile operating system based on a modified version of the Linux kernel and other open source software, designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is developed by a consortium of developers known as the Open Handset Alliance, with the main contributor and commercial marketer being Google</string>
+
+    <string name="slide_2_title">About Asp.Net</string>
+    <string name="slide_2_desc">ASP.NET is an open-source server-side web-application framework designed for web development to produce dynamic web pages developed by Microsoft to allow programmers to build dynamic web sites, applications and services</string>
+
+    <string name="slide_3_title">About JavaScript</string>
+    <string name="slide_3_desc">JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.</string>
+
+    <string name="slide_4_title">About WebDevelopment</string>
+    <string name="slide_4_desc">Web development is the work involved in developing a website for the Internet or an intranet. Web development can range from developing a simple single static page of plain text to complex web-based internet applications, electronic businesses, and social network services.</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">SlideShow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Profile</string>
+    <string name="nav_header_subtitle">Email:upbind027@gmail.com</string>
+
 </resources>

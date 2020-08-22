@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/dp_10"
+        android:clickable="true"
+        android:src="@drawable/ic_action_arrow_back"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/NoImageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Image deleted"
+        android:textColor="@color/colorWhite"
+        android:textSize="22sp"
+        android:visibility="gone" />
+
+    <com.corteva.rootsapplication.custom_views.TouchImageView
+        android:id="@+id/imageview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="center" />
+
+    <ImageView
+        android:id="@+id/editBtn"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/dp_10"
+        android:clickable="true"
+        android:contentDescription="@android:drawable/ic_menu_close_clear_cancel"
+        android:src="@drawable/ic_action_arrow_back" />
+
+    <ImageView
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_10"
+        android:layout_toLeftOf="@+id/editBtn"
+        android:visibility="gone" />
+
+</RelativeLayout>
