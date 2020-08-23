@@ -88,24 +88,25 @@
             android:gravity="center"
             android:orientation="horizontal">
 
-            <ImageView
+            <!--<ImageView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.1"
-                android:src="@drawable/gmlogo" />
+                android:src="@drawable/gmlogo" />-->
 
-            <TextView
+            <com.google.android.gms.common.SignInButton
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:text="SignUp with Gmail"
                 android:textColor="#FF001E"
                 android:textSize="@dimen/sp_14"
+                android:id="@+id/googleSignInBtn"
                 android:textStyle="bold" />
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
                 android:layout_weight="0.1"
                 android:src="@drawable/fblogo" />
 
@@ -114,7 +115,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="@dimen/dp_5"
                 android:layout_weight="0.5"
-                android:text="SignUp with Facebook"
+                android:paddingLeft="@dimen/dp_55"
+                android:text="Sign in"
                 android:textColor="@color/colorBlue" />
 
         </LinearLayout>

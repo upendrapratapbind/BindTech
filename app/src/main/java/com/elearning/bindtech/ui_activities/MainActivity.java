@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private Menu menu;
     private View edit;
     private LinearLayout courses, gallery, books, contents, setting;
-
+    Toolbar toolbar = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,27 +38,27 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeToolbar() {
-        Toolbar toolbar = null;
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-            toolbar = findViewById(R.id.toolbar);
-        }
+
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
+
         setSupportActionBar(toolbar);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
             toolbar.setTitle("E-Learning");
             setToolbarTitle("");
-        }
+
 
 
     }
 
-    private void setSupportActionBar(Toolbar toolbar) {
-    }
 
     public void setToolbarTitle(String text) {
+
         ActionBar actionBar = this.getSupportActionBar();
-        actionBar.setDisplayHomeAsUpEnabled(true);
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_action_menu);
-        actionBar.setTitle("E-Learning");
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true);
+            actionBar.setHomeAsUpIndicator(R.drawable.ic_action_menu);
+            actionBar.setTitle("E-Learning");
+        }
     }
 
     @Override
@@ -97,8 +97,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initDrawer() {
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        androidx.appcompat.widget.Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
