@@ -6,12 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".ui_activities.BookActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <include
+        android:id="@+id/ap_bar_layout"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Books"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_student_list"
+        android:layout_width="122dp"
+        android:layout_height="40dp"
+        android:background="@color/colorBlue"
+        android:text="Student List"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_bar_layout"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_bar_layout">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_rollno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Roll No"
+            android:inputType="number"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_student_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student Name"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edt_contactno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact No"
+            android:inputType="number"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/edt_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:inputType="text"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbtn_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Male" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbtn_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="SUBMIT"
+            android:textColor="#fff"
+            android:textSize="20sp"
+
+            />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

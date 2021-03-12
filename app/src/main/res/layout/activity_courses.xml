@@ -8,6 +8,14 @@
     android:padding="16dp"
     tools:context=".ui_activities.CoursesActivity">
 
+    <include
+        android:id="@+id/ap_bar_layout"
+        layout="@layout/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextTo"

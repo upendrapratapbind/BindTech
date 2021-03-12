@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">E-Learning</string>
+    <string name="app_name">BindTech</string>
     <string name="head1">Screen1</string>
     <string name="head2">Screen2</string>
     <string name="head3">Screen3</string>
@@ -41,5 +41,6 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="nav_header_title">Profile</string>
     <string name="nav_header_subtitle">Email:upbind027@gmail.com</string>
+    <string name="student_database">Student Database</string>
 
 </resources>

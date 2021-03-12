@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.elearning.bindtech.R;
@@ -35,6 +36,7 @@ public class CoursesActivity extends AppCompatActivity {
     private EditText editTextFrom;
     private EditText editTextSubject;
     private EditText editTextMessage;
+    private TextView screen_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +47,8 @@ public class CoursesActivity extends AppCompatActivity {
         editTextFrom = findViewById(R.id.editTextFrom);
         editTextSubject = findViewById(R.id.editTextSubject);
         editTextMessage = findViewById(R.id.editTextMessage);
+        screen_title = findViewById(R.id.title_tv);
+        screen_title.setText("Courses");
 
         findViewById(R.id.buttonSend).setOnClickListener(new View.OnClickListener() {
             @Override

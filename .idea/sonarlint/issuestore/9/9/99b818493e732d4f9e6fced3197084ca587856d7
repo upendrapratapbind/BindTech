@@ -1,0 +1,9 @@
+
+^
+java:S1854)"<Remove this useless assignment to local variable "foodData".(İ¶ÃÖûÿÿÿÿ8Ú“Éÿ.
+O
+java:S1481)"-Remove this unused "foodData" local variable.(İ¶ÃÖûÿÿÿÿ8Ú“Éÿ.
+P
+java:S1128".Remove this unused import 'retrofit.http.GET'.(ÇƒóÈùÿÿÿÿ8Ú“Éÿ.
+L
+java:S1128"/Remove this unused import 'retrofit2.Retrofit'.(ŠĞİ8Ú“Éÿ.

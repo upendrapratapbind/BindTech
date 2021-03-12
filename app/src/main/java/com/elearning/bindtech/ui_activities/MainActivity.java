@@ -19,6 +19,7 @@ import android.widget.LinearLayout;
 import android.widget.Toolbar;
 
 import com.elearning.bindtech.R;
+import com.elearning.bindtech.app_services.MyIntentService;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -32,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //only for Intent Service
+        Intent intent = new Intent(this, MyIntentService.class);
+        startService(intent);
+        //close app service code
         initializeToolbar();
         initDrawer();
         getActivityScreen();
@@ -124,11 +129,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void getActivityScreen() {
-        courses = findViewById(R.id.courseLayout);
+        courses = findViewById(R.id.
+                courseLayout);
         courses.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, CoursesActivity.class);
+                startActivity(intent);
+            }
+        });
+        gallery = findViewById(R.id.galleryLayout);
+        gallery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, GalleryActivity.class);
                 startActivity(intent);
             }
         });

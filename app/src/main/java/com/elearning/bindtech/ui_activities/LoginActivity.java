@@ -87,6 +87,8 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress_login_btn);
         checkBox = findViewById(R.id.checkboxBtn);
         signInButton = findViewById(R.id.googleSignInBtn);
+        //first we intialized the FirebaseAuth object
+        mAuth = FirebaseAuth.getInstance();
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
